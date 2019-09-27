@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM manee2k6/python:latest
+FROM python:latest
 
 MAINTAINER MANIVANNAN.C
 

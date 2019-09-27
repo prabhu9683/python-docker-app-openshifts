@@ -6,14 +6,14 @@ node{
       }
    
    stage('Docker Build') {
-     def app = docker.build "manee2k6/itrainbatman"
+     def app = docker.build "manee2k6/itrain-padman-py-app"
     }
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
-          sh 'docker tag manee2k6/itrainbatman manee2k6/itrainbatman:dev'
-          sh 'docker push manee2k6/itrainbatman:dev'
-          sh 'docker push manee2k6/itrainbatman:latest'
+          sh 'docker tag manee2k6/itrain-padman-py-app manee2k6/itrain-padman-py-app:dev'
+          sh 'docker push manee2k6/itrain-padman-py-app:dev'
+          sh 'docker push manee2k6/itrain-padman-py-app:latest'
       }
     }
     stage("App deployment started"){

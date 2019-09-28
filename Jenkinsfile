@@ -2,7 +2,7 @@ node{
    
    stage(" Code Checkout"){
       echo 'App build started..'
-      git credentialsId: 'githubID', url':https://github.com/prabhu9683/python-docker-app-openshifts'
+      git credentialsId: 'GitHubID', url':https://github.com/prabhu9683/python-docker-app-openshifts'
       }
    
    stage('Docker Build') {
